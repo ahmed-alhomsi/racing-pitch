@@ -1,0 +1,70 @@
+*,*::after,*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4 { 
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Didact Gothic', monospace;
+    color: #fff;
+    font-weight: 100;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-family: 'Regular Italic', 'sans-serif';
+    color: #fff;
+    font-size: 1em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.main-section {
+    background: #000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.welcome-section{
+    position:absolute;
+}
+
+.button {
+    font-family: 'Poppins', 'SemiBold Italic', monospace;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+    font-size: 1em;
+    height: 2.5em;
+    width: 8em;
+    border: solid #fff 1px;
+}
+
+.button:hover {
+    /*
+    opacity: ;
+    transform: ;
+    */
+}
+
+.img {
+    /*margin: 0;*/
+    /*padding: 5em;*/
+    display: none;
+    width: 100vw;
+    height: 100vh;
+}
