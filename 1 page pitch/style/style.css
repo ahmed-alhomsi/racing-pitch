@@ -7,7 +7,8 @@
 }
 
 html {
-    background: rgb(228, 225, 225);
+    background: rgb(0,0,0);
+    color: #fff;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -15,49 +16,71 @@ html {
 h1, h2, h3, h4 { 
     text-transform: uppercase;
     letter-spacing: 0.5em;
+    margin-bottom: 1.5em;
     font-size: 2em;
     font-family: 'Didact Gothic', monospace;
-    margin-bottom: 1em;
 }
 
 p {
     font-family: 'Regular Italic', 'sans-serif';
-    font-size: 1em;
+    font-size: 1.5em;
+    line-height: 1.4em;
 }
 
 ul {
-    font-size: 1.5em;
     list-style-type: none;
+    font-size: 1.25em;
 }
 
 section {
     width: 100%;
-    padding: 10em;
+    padding: 15em;
 }
 
-header ul {
-    font-size: 1em;
-    list-style-type: none;
-    display: flex;
-    text-align: center;
-    margin-right: 0.5em;
+.navbar ul {
+    font-size: 1.1em;
 }
 
-header a {
+.navbar {
+    position: fixed;
+    z-index: 999; 
+    background-color: rgba(104, 104, 104, 0.349);
+    overflow: hidden;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    transition: 600ms;
+    line-height: 1em;
+}
+
+.navbar-open {
+    width: 10%;
+}
+
+.navbar a {
+    padding: 0.7em;
+    line-height: 1em;
     text-decoration: none;
-    color: #000;
-    margin-left: 1.5em;
-    font-size: 15px;
+    color: #fff;
+    font-size: 0.8em;
+    display: block;
+    transition: 0.3s;
 }
 
-ul a:hover {
-    color: rgb(0, 0, 0);
-    font-weight: 500;
+.navbar a:hover {
+    color: rgb(168, 167, 167);
+    cursor: pointer;
 }
 
 .logo {
-    width: 2em;
-    height: 2em;
+    z-index: 999;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    width: 4em;
+    height: 4em;
 }
 
 .logo:hover {
@@ -66,36 +89,23 @@ ul a:hover {
     border-radius: 4px;
 }
 
-header {
-    width: 100%;
-    position: fixed;
-    text-align: center;
-    padding: 1em;
-    background: #fff;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-}
-
-.navbar {
-    z-index: 999;
-    top: 0;
-    width: 100%;
-    transition: 500ms;
-    overflow: hidden;
-}
-
 .video {
     border: none;
 }
 
-/* 
-.navbar-open {
-    width: 100%;
-} */
-
 .contents-section {
+    display: flex;
     text-align: left;
+    background-image: url("./../../img/Collage.png");
+}
+
+.contents-list {
+    background:rgba(26, 25, 25, 0.733);
+    border-radius: 20px;
+}
+
+li {
+    margin-top: 1em;
 }
 
 .contents-section .container {
@@ -113,6 +123,7 @@ header {
 }
 
 .goodafternoon-heading {
+    margin-bottom: 0;
     margin-top: 8em;
     text-align: center;
     color: #fff;
@@ -126,18 +137,20 @@ header {
 
 .begin {
     display: block;
+    text-align: center;
     margin: 0 auto;
     text-transform: uppercase;
+    text-decoration: none;
     font-family: 'Poppins', 'SemiBold Italic', monospace;
     border-radius: 10px;
     background: #000;
     color: #fff;
-    font-size: 1em;
     height: 2.5em;
     width: 8em;
+    padding-top: 0.5em;
     border: solid #fff 1px;
     opacity: 0;
-    margin-top: -5em;
+    margin-top: -6em;
 }
 
 .begin:hover {
@@ -145,10 +158,18 @@ header {
     transition: opacity;
 }
 
+.inspirations-section h2 {
+    margin-left: 2em;
+}
+
+.inspirations-section * + * {
+    margin-left: 2em;
+}
+
 .inspirations-section .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .inspirations-section p {
@@ -157,10 +178,18 @@ header {
 
 .trailers {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
+.trailers div {
+    display: flex;
+}
+
+.trailers * + * {
+    margin: 2em;
+}
+
+/*
 #first-v {
     margin-bottom: 4em;
 }
@@ -180,14 +209,99 @@ header {
 .trailers * + * {
     margin-left: 5em;
 }
-
-.what-makes-it-fun-section p {
-    font-size: 1.5em;
-}
+*/
 
 .what-makes-it-fun-section ul {
     max-width: 100ch;
     margin-top: 1em;
+}
+
+.dislikes-in-industry-section .container {
+    line-height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dislikes-in-industry-section h1 {
+    margin-bottom: 2em;
+}
+
+.dislikes-in-industry-section div + div {
+    margin-left: 2em;
+}
+
+.graphics-section div + div {
+    margin-left: 2em;
+}
+
+.graphics-section .container{
+    text-align: left;
+    display: flex;
+}
+
+.graphics-section p {
+    max-width: 35ch;
+}
+
+.gameplay-mechanics-section p {
+    margin-top: 1em;
+}
+
+.gameplay-mechanics-section {
+    text-align: center;
+}
+
+.progression-section h2 {
+    text-align: center;
+    margin-bottom: 2em;;
+}
+
+.progression-section p + p {
+    margin-left: 2em;
+}
+
+.sound-section .container{
+    display: flex;
+    flex-direction: flex-start;
+    justify-content: center;
+}
+
+.sound-section p{
+    line-height: 1.2em;
+    margin-top: 2em;
+    margin-right: 2em;
+    max-width: 50ch;
+}
+
+.ui-section {
+    text-align: left;
+}
+
+.ui-section .container {
+    display: flex;
+    align-items: center;
+}
+
+.ui-section div + div {
+    margin-left: 2em;
+}
+
+.platforms-section {
+    text-align: center;
+}
+
+.support-and-payment-model {
+    text-align: center;
+}
+
+.support-and-payment-model p {
+    text-align: center;
+}
+
+.last-animation-section {
+    display: flex;
+    justify-content: center;
 }
 
 .split {
@@ -212,4 +326,25 @@ header {
 .fadein {
     opacity: 0.8;
     transition: 250ms opacity 2000ms;
+}
+
+.grow {
+    animation-name: grow-animation;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes grow-animation{
+    0% {transform: scale(0.5);}
+    10% {transform: scale(0.6);}
+    20% {transform: scale(0.7);}
+    30% {transform: scale(0.8);}
+    40% {transform: scale(0.9);}
+    50% {transform: scale(1);}
+    60% {transform: scale(0.9);}
+    70% {transform: scale(0.8);}
+    80% {transform: scale(0.7);}
+    90% {transform: scale(0.6);}
+    100% {transform: scale(0.5);}
 }

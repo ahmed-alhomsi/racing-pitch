@@ -1,16 +1,14 @@
 const navtoggle = document.querySelector('.nav-toggle');
+const navbar = document.querySelector('.navbar');
 const afternoonheading = document.querySelector('.goodafternoon-heading');
 const begin = document.querySelector('.begin');
+const lastAnimation = document.querySelector('.scale-and-fade')
+
+navtoggle.addEventListener('click',()=>{
+    navbar.classList.toggle('navbar-open');
+});
 
 window.setTimeout(()=>{
     begin.classList.add('fadein');
     afternoonheading.classList.add('up');
 }, 800);
-
-begin.addEventListener('click',()=>{
-    scrollTo(0, 570);
-});
-
-navtoggle.addEventListener('click',()=>{
-    navbar.classList.toggle('navbar-open');
-});
