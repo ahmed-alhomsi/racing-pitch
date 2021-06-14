@@ -45,7 +45,7 @@ section {
 .navbar {
     position: fixed;
     z-index: 999; 
-    background-color: rgba(104, 104, 104, 0.349);
+    background-color: rgba(19, 18, 18, 0.637);
     overflow: hidden;
     height: 100%;
     width: 0%;
@@ -86,8 +86,8 @@ section {
 
 .logo:hover {
     cursor: pointer;
-    border: solid 1px #fff;
-    border-radius: 4px;
+    border: solid 2px #fff;
+    border-radius: 10px;
 }
 
 .video {
@@ -160,12 +160,8 @@ li {
     transition: opacity;
 }
 
-.inspirations-section h2 {
-    margin-left: 2em;
-}
-
-.inspirations-section * + * {
-    margin-left: 2em;
+.inspirations-section .video-div {
+    margin-right: 2em;
 }
 
 .inspirations-section .container {
@@ -191,46 +187,22 @@ li {
     margin: 2em;
 }
 
-/*
-#first-v {
-    margin-bottom: 4em;
+.what-makes-it-fun-section .container{
+    display: flex;
 }
 
-#second-v {
-    margin-top: 4em;
-}
-
-#third-v {
-    margin-bottom: 4em;
-}
-
-#fourth-v {
-    margin-top: 4em;
-}
-
-.trailers * + * {
-    margin-left: 5em;
-}
-*/
-
-.what-makes-it-fun-section ul {
-    max-width: 100ch;
-    margin-top: 1em;
+.what-makes-it-fun-section .video-div {
+    margin-left: 2em;
 }
 
 .dislikes-in-industry-section .container {
-    line-height: 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.dislikes-in-industry-section h1 {
-    margin-bottom: 2em;
-}
-
-.dislikes-in-industry-section div + div {
-    margin-left: 2em;
+.dislikes-in-industry-section p {
+    max-width: 30ch;
 }
 
 .graphics-section div + div {
@@ -243,24 +215,20 @@ li {
 }
 
 .graphics-section p {
-    max-width: 35ch;
-}
-
-.gameplay-mechanics-section p {
-    margin-top: 1em;
+    max-width: 30ch;
 }
 
 .gameplay-mechanics-section {
-    text-align: center;
+    text-align: left;
+}
+
+.gameplay-mechanics-section p {
+    max-width: 30ch;
 }
 
 .progression-section h2 {
     text-align: center;
     margin-bottom: 2em;;
-}
-
-.progression-section p + p {
-    margin-left: 2em;
 }
 
 .sound-section .container{
@@ -289,15 +257,15 @@ li {
     margin-left: 2em;
 }
 
+.platforms-section .container {
+    display: flex;
+}
+
 .platforms-section {
-    text-align: center;
+    text-align: left;
 }
 
-.support-and-payment-model {
-    text-align: center;
-}
-
-.support-and-payment-model p {
+.support-and-payment-section {
     text-align: center;
 }
 
@@ -330,56 +298,59 @@ li {
     transition: 250ms opacity 2000ms;
 }
 
+.animate {
+    transform: scale(0.1);
+    opacity: 0;
+}
+
 .grow {
     animation-name: grow-animation;
-    animation-duration: 4000ms;
-    animation-iteration-count: infinite;
+    animation-duration: 5000ms;
     animation-timing-function: linear;
 }
 
 @keyframes grow-animation{
     0% {
-        transform: scale(0.5);
-        opacity: 0.5;
+        transform: scale(0,1);
+        opacity: 0;
     }
     10% {
-        transform: scale(0.6);
-        opacity: 0.6;
+        transform: scale(0.2);
+        opacity: 0.1;
     }
     20% {
-        transform: scale(0.7);
-        opacity: 0.7;
+        transform: scale(0.3);
+        opacity: 0.2;
     }
     30% {
-        transform: scale(0.8);
-        opacity: 0.8;
+        transform: scale(0.4);
+        opacity: 0.3;
     }
     40% {
-        transform: scale(0.9);
-        opacity: 0.9;
+        transform: scale(0.5);
+        opacity: 0.4;
     }
     50% {
-        transform: scale(1);
-        opacity: 1;
+        transform: scale(0.6);
+        opacity: 0.5;
     }
     60% {
-        transform: scale(0.9);
-        opacity: 0.9;
+        transform: scale(0.7);
+        opacity: 0.6;
     }
     70% {
         transform: scale(0.8);
-        opacity: 0.8;
-    }
-    80% {
-        transform: scale(0.7);
         opacity: 0.7;
     }
+    80% {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
     90% {
-        transform: scale(0.6);
-        opacity: 0.6;
+        transform: scale(1);
+        opacity: 0.9;
     }
     100% {
-        transform: scale(0.5);
-        opacity: 0.5;
+        opacity: 1;
     }
 }
