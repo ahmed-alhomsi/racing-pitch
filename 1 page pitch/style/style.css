@@ -95,11 +95,34 @@ section {
 }
 
 .contents-section {
-    background: url('./../../img/Collage.png') no-repeat center center fixed; 
+    background: url('./../../img/Collage.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100vh;
+}
+
+.contents-section{
+    position: relative;
+    text-align: center;
+}
+
+.contents-section h2 {
+    margin-bottom: 1em;
+    color: orangered;
+}
+
+.contents-section li {
+    font-size: 0.99em;
+}
+
+.black-div {
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: rgba(19, 18, 18, 0.966);
 }
 
 li {
