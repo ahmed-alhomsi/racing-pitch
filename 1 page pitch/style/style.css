@@ -95,12 +95,28 @@ section {
 }
 
 .contents-section {
-    background: url('./../../img/Collage.png') no-repeat center center fixed;
+    background: linear-gradient( rgba(0, 0, 0, 0.192), rgba(0, 0, 0, 0.192) ), url('./../../img/Collage.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100vh;
+}
+
+.contents-section .container {
+    background: rgba(19, 18, 18, 0.233);
+    height: 100%;
+    width: 100%;
+}
+
+.contents-section::before {
+    content: '';
+    height: 10%;
+}
+
+.contents-section::after {
+    content: '';
+    height: 10%;
 }
 
 .contents-section{
@@ -109,8 +125,9 @@ section {
 }
 
 .contents-section h2 {
-    margin-bottom: 1em;
-    color: orangered;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.658);
+    border-radius: 30px;
 }
 
 .contents-section li {
@@ -119,6 +136,7 @@ section {
 
 .black-div {
     height: 100%;
+    width: 50%;
     top: 0;
     right: 0;
     position: absolute;
