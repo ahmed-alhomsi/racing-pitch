@@ -95,14 +95,15 @@ section {
 }
 
 .contents-section {
-    display: flex;
     text-align: left;
     background-image: url("./../../img/Collage.png");
 }
 
 .contents-list {
-    background:rgba(26, 25, 25, 0.733);
+    width: 50%;
+    background:rgba(0, 0, 0, 0.932);
     border-radius: 20px;
+    text-align: center;
 }
 
 li {
@@ -110,7 +111,6 @@ li {
 }
 
 .contents-section .container {
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -187,8 +187,16 @@ li {
     margin: 2em;
 }
 
+.what-makes-it-fun-section h2 {
+    white-space: nowrap;
+}
+
 .what-makes-it-fun-section .container{
     display: flex;
+}
+
+.what-makes-it-fun-section p {
+    max-width: 30ch;
 }
 
 .what-makes-it-fun-section .video-div {
