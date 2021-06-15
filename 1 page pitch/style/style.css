@@ -95,24 +95,15 @@ section {
 }
 
 .contents-section {
-    text-align: left;
-    background-image: url("./../../img/Collage.png");
-}
-
-.contents-list {
-    width: 50%;
-    background:rgba(0, 0, 0, 0.932);
-    border-radius: 20px;
-    text-align: center;
+    background: url('./../../img/Collage.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 li {
     margin-top: 1em;
-}
-
-.contents-section .container {
-    justify-content: space-between;
-    align-items: center;
 }
 
 .welcome-section {
