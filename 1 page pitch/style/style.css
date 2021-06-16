@@ -317,15 +317,15 @@ li {
 }
 
 .animate {
-    transform: scale(0.1);
+    transform: scale(0.5);
     opacity: 0;
 }
 
-[data-scroll="in"] {
-    animation-name: grow-animation;
+img[data-scroll="in"] {
+    animation-name: zoomIn;
     animation-duration: 5000ms;
     animation-fill-mode: forwards;
-    animation-timing-function: linear;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @keyframes grow-animation{
@@ -374,3 +374,32 @@ li {
         opacity: 0.6;
     }
 }
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes zoomIn {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 0.6;
+    }
+    }
+    @keyframes zoomIn {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 0.6;
+    }
+    } 
